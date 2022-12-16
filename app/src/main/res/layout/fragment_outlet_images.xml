@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.registration_outlet_fragment.OutletImages">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save_outlet_images"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- 6. Photo Upload -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/photo_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/deal" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Upload Outlet Images"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edUploadOutletImage"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="Upload Outlet Image 1"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUploadOutletImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUploadOutlet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btnUploadOutletImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_document_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/edUploadOutletImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edUploadOutletImage" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edUploadOutletImage1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="Upload Outlet Image 2"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUploadOutletImage1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edUploadOutletImage">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUploadOutlet1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btnUploadOutletImage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_document_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/edUploadOutletImage1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edUploadOutletImage1" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edUploadOutletImage2"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="Upload Outlet Image 3"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUploadOutletImage2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edUploadOutletImage1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUploadOutlet2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btnUploadOutletImage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_document_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/edUploadOutletImage2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edUploadOutletImage2" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edUploadOutletImage3"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="Upload Outlet Image 4"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUploadOutletImage3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edUploadOutletImage2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUploadOutlet3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btnUploadOutletImage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_document_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/edUploadOutletImage3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edUploadOutletImage3" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edUploadOutletImage4"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:enabled="false"
+                    android:hint="Upload Outlet Image 5"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnUploadOutletImage4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edUploadOutletImage3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUploadOutlet4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btnUploadOutletImage4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add_document_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/edUploadOutletImage4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edUploadOutletImage4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_outlet_images"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_save_outlet_images"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save_outlet_images"
+            app:layout_constraintStart_toStartOf="@+id/btn_save_outlet_images"
+            app:layout_constraintTop_toTopOf="@+id/btn_save_outlet_images" />
+
+
+        <Button
+            android:id="@+id/btn_save_outlet_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

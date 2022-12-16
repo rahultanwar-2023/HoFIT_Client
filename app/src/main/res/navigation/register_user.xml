@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_user"
+    app:startDestination="@id/outletDetails">
+
+    <fragment
+        android:id="@+id/outletDetails"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.OutletDetails"
+        android:label="fragment_outlet_details"
+        tools:layout="@layout/fragment_outlet_details" />
+    <fragment
+        android:id="@+id/documentUpload"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.DocumentUpload"
+        android:label="fragment_document_upload"
+        tools:layout="@layout/fragment_document_upload" />
+    <fragment
+        android:id="@+id/categoryTimeSlot"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.CategoryTimeSlot"
+        android:label="fragment_category_time_slot"
+        tools:layout="@layout/fragment_category_time_slot" />
+    <fragment
+        android:id="@+id/facilities2"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.Facilities"
+        android:label="fragment_facilities"
+        tools:layout="@layout/fragment_facilities" />
+    <fragment
+        android:id="@+id/trainerCoachDetails"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.TrainerCoachDetails"
+        android:label="fragment_trainer_coach_details"
+        tools:layout="@layout/fragment_trainer_coach_details" />
+    <fragment
+        android:id="@+id/outletImages"
+        android:name="com.hofit.hofitclient.ui.fragment.registration_outlet_fragment.OutletImages"
+        android:label="fragment_outlet_images"
+        tools:layout="@layout/fragment_outlet_images" />
+
+</navigation>

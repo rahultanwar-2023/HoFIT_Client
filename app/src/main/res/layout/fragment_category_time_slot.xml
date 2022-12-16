@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.registration_outlet_fragment.CategoryTimeSlot">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_outlet_time_slot"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_save_outlet_days"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save_outlet_days"
+            app:layout_constraintStart_toStartOf="@+id/btn_save_outlet_days"
+            app:layout_constraintTop_toTopOf="@+id/btn_save_outlet_days" />
+
+
+        <Button
+            android:id="@+id/btn_save_outlet_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save_outlet_days"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/deal" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Your Morning time Slots"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Your Afternoon time Slots"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m6" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Your Evening time Slots"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a6" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select Your LateNight time Slots"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e6" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Outlet Closed Days"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_n5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6:00 AM to 7:00AM"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:00 AM to 8:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_m1"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8:00 AM to 9:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_m2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:00 AM to 10:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_m3"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM to 11:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_m4"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_m6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:00 AM to 12:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_m5"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_m5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00 AM to 13:00AM"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13:00 AM to 14:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_a1"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14:00 AM to 15:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_a2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:00 AM to 16:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_a3"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17:00 AM to 18:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_a5"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16:00 AM to 17:00AM"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00 AM to 19:00AM"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:00 AM to 20:00AM"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20:00 AM to 21:00AM"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_e2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21:00 AM to 22:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_e3"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_e3"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22:00 AM to 23:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_e4"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_e4"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_e6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23:00 AM to 00:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_e5"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_e5"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_e5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_n1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00 AM to 01:00AM"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_n2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01:00 AM to 02:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_n1"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_n1"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_n1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_n4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03:00 AM to 04:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_n3"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_n3"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_n3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_n3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="02:00 AM to 03:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_n2"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_n2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_n2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_n5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:00 AM to 05:00AM"
+                    app:layout_constraintEnd_toEndOf="@+id/checkBox_n4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_n4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunday"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tuesday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c2"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thursday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c4"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c1"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c1" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wednesday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c3"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c3" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Friday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c5"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c5" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saturday"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c6"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

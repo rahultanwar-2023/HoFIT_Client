@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.registration_outlet_fragment.Facilities">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save_outlet_facilities"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/facilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/deal" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select your center category"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edCategory"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteEDText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:text="Gym" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Select your center facilites"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edCategory" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Attendance"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox_l"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lockers"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox_w"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_a"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_a" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Washroom"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox_s"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_l"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_l" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sitting Area"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox_c"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_w"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_w" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Changing Rooms"
+                    app:layout_constraintBottom_toTopOf="@+id/checkBox_d"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_s"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_s" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drinking Water"
+                    app:layout_constraintStart_toStartOf="@+id/checkBox_c"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox_c" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_outlet_facilities"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_save_outlet_facilities"
+            app:layout_constraintEnd_toEndOf="@+id/btn_save_outlet_facilities"
+            app:layout_constraintStart_toStartOf="@+id/btn_save_outlet_facilities"
+            app:layout_constraintTop_toTopOf="@+id/btn_save_outlet_facilities" />
+
+
+        <Button
+            android:id="@+id/btn_save_outlet_facilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

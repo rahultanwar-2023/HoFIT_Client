@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_creation"
+    app:startDestination="@id/onBoard">
+    <fragment
+        android:id="@+id/onBoard"
+        android:name="com.hofit.hofitclient.ui.fragment.register_fragment.OnBoard"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_on_board" >
+        <action
+            android:id="@+id/action_onBoard_to_registerOutlet"
+            app:destination="@id/registerOutlet" />
+        <action
+            android:id="@+id/action_onBoard_to_loginOutlet"
+            app:destination="@id/loginOutlet" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerOutlet"
+        android:name="com.hofit.hofitclient.ui.fragment.register_fragment.register.RegisterOutlet"
+        android:label="fragment_register_outlet"
+        tools:layout="@layout/fragment_register_outlet" >
+        <action
+            android:id="@+id/action_registerOutlet_to_registerOTP"
+            app:destination="@id/registerOTP" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerOTP"
+        android:name="com.hofit.hofitclient.ui.fragment.register_fragment.register.RegisterOTP"
+        android:label="fragment_register_o_t_p"
+        tools:layout="@layout/fragment_register_o_t_p" />
+    <fragment
+        android:id="@+id/loginOutlet"
+        android:name="com.hofit.hofitclient.ui.fragment.register_fragment.login.LoginOutlet"
+        android:label="fragment_login_partner"
+        tools:layout="@layout/fragment_login_partner" >
+        <action
+            android:id="@+id/action_loginOutlet_to_loginOTP"
+            app:destination="@id/loginOTP" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginOTP"
+        android:name="com.hofit.hofitclient.ui.fragment.register_fragment.login.LoginOTP"
+        android:label="fragment_o_t_p"
+        tools:layout="@layout/fragment_o_t_p" />
+</navigation>
