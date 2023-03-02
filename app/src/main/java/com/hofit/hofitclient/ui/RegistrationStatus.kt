@@ -47,12 +47,10 @@ class RegistrationStatus : AppCompatActivity() {
                         }
                         timer.start()
                     }
-                    
+
                 } else {
                     binding.txRegisStatus.text = "Contact HoFIT customer care"
                 }
             }
-
-
     }
 }

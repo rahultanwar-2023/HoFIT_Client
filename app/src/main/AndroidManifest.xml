@@ -14,7 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HoFITClient"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.NetworkerStatus"
+            android:exported="true"
+            android:theme="@style/Theme.App.SplashScreen">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".ui.RegistrationStatus"
             android:exported="false">
@@ -22,7 +33,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ui.RegistrationOutlet"
             android:exported="false">
@@ -30,7 +40,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ui.PartnerHomepage"
             android:exported="false">
@@ -38,18 +47,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.App.SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

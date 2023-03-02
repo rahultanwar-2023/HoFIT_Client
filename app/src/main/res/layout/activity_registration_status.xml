@@ -11,6 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         app:layout_constraintBottom_toTopOf="@+id/tx_regis_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/regis_status" />
 

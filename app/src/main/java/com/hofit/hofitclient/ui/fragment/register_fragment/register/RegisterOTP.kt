@@ -159,11 +159,17 @@ class RegisterOTP : Fragment() {
         val fireBase = Firebase.firestore
             .collection("super_admin")
             .document("rohit-20072022")
+            .collection("sports_centers").document(auth1).collection("outlet_details").document("details")
+
+        val fireBase1 = Firebase.firestore
+            .collection("super_admin")
+            .document("rohit-20072022")
             .collection("sports_centers").document(auth1)
 
         val outletRegis = hashMapOf(
             "owner_id" to auth1,
             "outlet_id" to auth1,
+            "outlet_details_checker" to "false",
             "outlet_mobile_number" to mobileNumber,
             "owner_name" to "",
             "outlet_name" to "",
@@ -178,6 +184,11 @@ class RegisterOTP : Fragment() {
         )
 
         fireBase
+            .set(outletRegis, SetOptions.merge())
+            .addOnSuccessListener {}
+            .addOnFailureListener {}
+
+        fireBase1
             .set(outletRegis, SetOptions.merge())
             .addOnSuccessListener {}
             .addOnFailureListener {}

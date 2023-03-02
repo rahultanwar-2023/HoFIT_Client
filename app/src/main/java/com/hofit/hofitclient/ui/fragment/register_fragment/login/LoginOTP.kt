@@ -135,7 +135,8 @@ class LoginOTP : Fragment() {
         val fireBase = Firebase.firestore
             .collection("super_admin")
             .document("rohit-20072022")
-            .collection("sports_centers").document(auth1)
+            .collection("sports_centers").document(auth1).collection("outlet_details")
+            .document("details")
         try {
             fireBase
                 .get()

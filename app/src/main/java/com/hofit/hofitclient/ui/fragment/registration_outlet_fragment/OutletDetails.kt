@@ -2,8 +2,10 @@ package com.hofit.hofitclient.ui.fragment.registration_outlet_fragment
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.provider.OpenableColumns
 import android.view.LayoutInflater
 import android.view.View
@@ -20,12 +22,14 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import com.hofit.hofitclient.databinding.FragmentOutletDetailsBinding
+import com.hofit.hofitclient.ui.PartnerHomepage
 
 class OutletDetails : Fragment() {
 
     private lateinit var binding: FragmentOutletDetailsBinding
     private lateinit var auth: String
     private lateinit var fireBase: DocumentReference
+    private lateinit var fireBase1: DocumentReference
     private lateinit var mStorageReference: StorageReference
 
     private var imageURI: Uri? = null
@@ -41,7 +45,13 @@ class OutletDetails : Fragment() {
         fireBase = Firebase.firestore
             .collection("super_admin")
             .document("rohit-20072022")
+            .collection("sports_centers").document(auth).collection("outlet_details").document("details")
+
+        fireBase1 = Firebase.firestore
+            .collection("super_admin")
+            .document("rohit-20072022")
             .collection("sports_centers").document(auth)
+
         mStorageReference =
             Firebase.storage.reference.child("outlet/").child(auth).child("outlet_images/")
 
@@ -73,6 +83,23 @@ class OutletDetails : Fragment() {
             binding.btnSaveOutletDetails.visibility = View.INVISIBLE
             binding.progressOutletDetails.visibility = View.VISIBLE
             saveOutLetDetails()
+//            fireBase.get()
+//                .addOnSuccessListener { result ->
+//                    if (result != null) {
+//                        val detailsChecker = result.get("outlet_details_checker").toString()
+//                        if (detailsChecker == "True") {
+//
+//                        } else {
+//                            Toast.makeText(
+//                                requireContext(),
+//                                "Details Saved already",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                            binding.btnSaveOutletDetails.visibility = View.VISIBLE
+//                            binding.progressOutletDetails.visibility = View.INVISIBLE
+//                        }
+//                    }
+//                }
         }
     }
 
@@ -174,6 +201,16 @@ class OutletDetails : Fragment() {
                                     .show()
                             }
                             .addOnFailureListener {}
+
+                        fireBase1.set(outletRegis, SetOptions.merge())
+                            .addOnSuccessListener {
+                                clearED()
+                                binding.btnSaveOutletDetails.visibility = View.VISIBLE
+                                binding.progressOutletDetails.visibility = View.INVISIBLE
+                                Toast.makeText(requireContext(), "Data saved", Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                            .addOnFailureListener {}
                     }
                 }
             }
@@ -220,5 +257,4 @@ class OutletDetails : Fragment() {
                 binding.edOutLetPinCode1.setText(outPinCode)
             }
     }
-
 }

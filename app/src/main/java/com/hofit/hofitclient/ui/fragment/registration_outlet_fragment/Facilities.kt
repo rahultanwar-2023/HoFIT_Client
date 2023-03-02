@@ -50,9 +50,11 @@ class Facilities : Fragment() {
             binding.btnSaveOutletFacilities.visibility = View.INVISIBLE
             binding.progressOutletFacilities.visibility = View.VISIBLE
 
+            val firebaseDoc1 = fireBase.collection("outlet_details").document("details")
             val outletCategory = hashMapOf(
                 "outlet_category" to binding.autoCompleteEDText.text.toString().trim()
             )
+            firebaseDoc1.set(outletCategory, SetOptions.merge())
             fireBase.set(outletCategory, SetOptions.merge())
 
             val firebaseDoc = fireBase.collection("facilities")

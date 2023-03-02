@@ -27,6 +27,7 @@ class RegistrationOutlet : AppCompatActivity() {
 
     private lateinit var auth: String
     private lateinit var fireBase: DocumentReference
+    private lateinit var fireBase1: DocumentReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +35,12 @@ class RegistrationOutlet : AppCompatActivity() {
         fireBase = Firebase.firestore
             .collection("super_admin")
             .document("rohit-20072022")
-            .collection("sports_centers").document(auth)
+            .collection("sports_centers").document(auth).collection("outlet_details").document("details")
 
+        fireBase1 = Firebase.firestore
+            .collection("super_admin")
+            .document("rohit-20072022")
+            .collection("sports_centers").document(auth)
 
         binding = ActivityRegistrationOutletBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -108,6 +113,8 @@ class RegistrationOutlet : AppCompatActivity() {
                     "outlet_regis_status" to "OnGoing"
                 )
                 fireBase
+                    .set(outletImageUrl, SetOptions.merge())
+                fireBase1
                     .set(outletImageUrl, SetOptions.merge())
                 val intent = Intent(this, RegistrationStatus::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
