@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "391296928238",
-    "firebase_url": "https://hofit-ede12-default-rtdb.firebaseio.com",
-    "project_id": "hofit-ede12",
-    "storage_bucket": "hofit-ede12.appspot.com"
+    "project_number": "882514450683",
+    "firebase_url": "https://hofit-b3558-default-rtdb.firebaseio.com",
+    "project_id": "hofit-b3558",
+    "storage_bucket": "hofit-b3558.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391296928238:android:f7f62d74e73ab8a27c66ff",
+        "mobilesdk_app_id": "1:882514450683:android:77d46bf70fd443cdd0f85e",
         "android_client_info": {
           "package_name": "com.hofit.hofitclient"
         }
       },
       "oauth_client": [
         {
-          "client_id": "391296928238-m6u44flbpg2tak0ofl8bgb99henq0cf5.apps.googleusercontent.com",
+          "client_id": "882514450683-vptoi2gvue2ce7aupmeeg20nt4h0p1rc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hofit.hofitclient",
+            "certificate_hash": "4b53f935374b667e0da7358b43971721e7e7a0f0"
+          }
+        },
+        {
+          "client_id": "882514450683-7vpaasvi11i0p0psinit6tutgigcsd2v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8Dg-xbrYt6K4e0pDC8VoR56h-a6IszoE"
+          "current_key": "AIzaSyBD-xC91_xK4A5ESjpnoZfp56rv5ySdMXA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "391296928238-m6u44flbpg2tak0ofl8bgb99henq0cf5.apps.googleusercontent.com",
+              "client_id": "882514450683-7vpaasvi11i0p0psinit6tutgigcsd2v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -37,35 +45,35 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391296928238:android:f776dc6928236e187c66ff",
+        "mobilesdk_app_id": "1:882514450683:android:94c58d46394575e0d0f85e",
         "android_client_info": {
           "package_name": "com.hofit.hofituser"
         }
       },
       "oauth_client": [
         {
-          "client_id": "391296928238-p8gtmci398tjd7mgpe2r2kjl56af9n5c.apps.googleusercontent.com",
+          "client_id": "882514450683-334jdl3q01pc5gvi0i20mraqdth2io09.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.hofit.hofituser",
-            "certificate_hash": "92d45704f24582d23d76212048996aca19c62332"
+            "certificate_hash": "4b53f935374b667e0da7358b43971721e7e7a0f0"
           }
         },
         {
-          "client_id": "391296928238-m6u44flbpg2tak0ofl8bgb99henq0cf5.apps.googleusercontent.com",
+          "client_id": "882514450683-7vpaasvi11i0p0psinit6tutgigcsd2v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8Dg-xbrYt6K4e0pDC8VoR56h-a6IszoE"
+          "current_key": "AIzaSyBD-xC91_xK4A5ESjpnoZfp56rv5ySdMXA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "391296928238-m6u44flbpg2tak0ofl8bgb99henq0cf5.apps.googleusercontent.com",
+              "client_id": "882514450683-7vpaasvi11i0p0psinit6tutgigcsd2v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

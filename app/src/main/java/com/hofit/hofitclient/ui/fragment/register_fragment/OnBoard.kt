@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
@@ -24,6 +26,13 @@ import com.hofit.hofitclient.ui.RegistrationOutlet
 import com.hofit.hofitclient.ui.RegistrationStatus
 
 class OnBoard : Fragment() {
+
+    //Layout Var Define
+    private var layoutRegisStatus : ConstraintLayout? = null
+    private var layoutOnboard : ConstraintLayout? = null
+
+    //ProgressBar (Status ProgressBar)
+    private var progressBarRegisStatus : ProgressBar? = null
 
     private var onBoardAdapter: OnBoardAdapter? = null
     private var tabLayout: TabLayout? = null
